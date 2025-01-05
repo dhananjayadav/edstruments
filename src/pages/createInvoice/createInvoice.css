@@ -1,0 +1,45 @@
+.create-invoice-container {
+    padding: 8px;
+}
+
+.create-invoice-main-container {
+    display: flex;
+    gap: 16px;
+}
+.create-inv-detail-img {
+    width: 56px;
+    height: 56px;
+}
+
+.create-inv-detail-heading {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.create-inv-detail-heading-container {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.create-inv-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.inv-detail-sub-heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+.inv-detail-options-sub-container {
+    display: flex;
+    gap: 8px;
+    width: 332px;
+    flex-direction: column;
+}
+
+.inv-detail-options {
+    display: flex;
+    justify-content: space-between;
+    width: 684px;
+}

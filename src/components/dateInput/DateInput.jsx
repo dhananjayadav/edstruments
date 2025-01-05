@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./dateInput.css";
 
-export const DateInput = ({ onChange, value }) => {
+export const DateInput = ({ onChange, value, label, required }) => {
   const dateInputRef = useRef();
 
   function formatDateToMMDDYY(dateInput) {
@@ -23,38 +23,47 @@ export const DateInput = ({ onChange, value }) => {
   };
 
   return (
-    <div
-      className="date-input-container"
-      onClick={() => {
-        dateInputRef.current.showPicker();
-      }}
-    >
-      <div className="date-input-main-container">
+    <div className={`${label && "input-main-container-label"}`}>
+      {label && (
+        <div className="input-label-container">
+          <span className="input-label-text">
+            {label} {required && <sup className="input-required">*</sup>}
+          </span>
+        </div>
+      )}
+      <div
+        className="date-input-container"
+        onClick={() => {
+          dateInputRef.current.showPicker();
+        }}
+      >
+        <div className="date-input-main-container">
+          <img
+            className="date-input-cal-img"
+            src="/images/calendar.svg"
+            alt="calendar"
+          />
+          <span
+            className={`date-input-text ${
+              value ? "date-input-text-selected" : ""
+            }`}
+          >
+            {formatDateToMMDDYY(value)}
+          </span>
+        </div>
         <img
-          className="date-input-cal-img"
-          src="/images/calendar.svg"
-          alt="calendar"
+          className="date-input-chevron-img"
+          src="/images/chevron.svg"
+          alt="chevron"
         />
-        <span
-          className={`date-input-text ${
-            value ? "date-input-text-selected" : ""
-          }`}
-        >
-          {formatDateToMMDDYY(value)}
-        </span>
-      </div>
-      <img
-        className="date-input-chevron-img"
-        src="/images/chevron.svg"
-        alt="chevron"
-      />
 
-      <input
-        ref={dateInputRef}
-        className="date-input"
-        type="date"
-        onChange={handleDateChange}
-      />
+        <input
+          ref={dateInputRef}
+          className="date-input"
+          type="date"
+          onChange={handleDateChange}
+        />
+      </div>
     </div>
   );
 };

@@ -1,5 +1,21 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input-main-container-label {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.input-label-text {
+  color: #4b5768;
+  font-size: 14px;
+  font-weight: 14px;
+}
+
+.input-required {
+  color: red;
 }
