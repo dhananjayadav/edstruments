@@ -1,70 +1,89 @@
 .file-upload-container {
-    height: 844px;
-    width: 684px;
-    border: 1px solid #64748B;
-    border-style: dashed;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 844px;
+  width: 684px;
+  border: 1px solid #64748b;
+  border-style: dashed;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-upload-container-main-img {
+  height: 840px;
+  width: 680px;
 }
 .file-upload-heading-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .file-upload-title {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    color: #0D0F11;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #0d0f11;
 }
 
 .file-upload-description {
-    font-weight: 400;
-    font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .file-upload-img {
-    height: 320px;
-    width: 320px;
+  height: 320px;
+  width: 320px;
 }
 
 .file-upload-button {
-    height: 48px;
-    width: 153px;
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid #64748B;
-    box-shadow: 0 0 2px 2px #0C1F5614;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  height: 48px;
+  width: 153px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #64748b;
+  box-shadow: 0 0 2px 2px #0c1f5614;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .file-upload-button-img {
-    height: 15px;
-    width: 15px;
+  height: 15px;
+  width: 15px;
 }
 
 .file-upload-instruction-box {
-    font-size: 14px;
-    font-weight: 400;
-    color: #626c7b;
+  font-size: 14px;
+  font-weight: 400;
+  color: #626c7b;
 }
 
 .file-upload-instruction-box-link {
-    color: #1687e1;
+  color: #1687e1;
+  text-decoration: none;
+}
+
+.file-upload-instruction-box-link:hover {
+  text-decoration: underline;
 }
 
 .file-upload-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-container-dragging {
+  background-color: #f0f8ff;
+  border-color: #007bff;
 }
