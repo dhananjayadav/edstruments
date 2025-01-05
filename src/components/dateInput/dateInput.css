@@ -1,0 +1,43 @@
+.date-input {
+    height: 1px;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.date-input-container {
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #64748B;
+    border-radius: 8px;
+    position: relative;
+}
+
+.date-input-cal-img {
+    width: 12px;
+    height: 13.33px;
+}
+
+.date-input-chevron-img {
+    width: 8px;
+    height: 4px;
+}
+.date-input-text {
+    color: #A0ABBB;
+    font-size: 14px;
+    font-weight: 400px;
+}
+
+.date-input-main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.date-input-text-selected {
+    color: black;
+}
