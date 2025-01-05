@@ -2,8 +2,11 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "./login.css";
+import { useNavigate } from "react-router-dom";
+import { ENVIRONMENT } from "../../utils/constants/environment";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email address")
@@ -15,7 +18,6 @@ export const Login = () => {
       .matches(/[0-9]/, "Password must contain at least one number")
       .required("Password is required"),
   });
-
   const initialValues = {
     email: "",
     password: "",
@@ -23,7 +25,8 @@ export const Login = () => {
 
   const onSubmit = (values) => {
     console.log("Form data", values);
-    alert("Login Successful!");
+    localStorage.setItem(ENVIRONMENT.LOGGED_IN_TOKEN_KEY, true);
+    navigate("/")
   };
 
   return (
